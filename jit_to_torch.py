@@ -37,9 +37,9 @@ def jit_to_torch(jit_path='checkpoints/DMS46_v1.pt', torch_path='checkpoints/DMS
     std = [0.229, 0.224, 0.225]
     std = [item * value_scale for item in std]
 
-    img = Image.open(test_image_path).resize((512,512), Image.Resampling.LANCZOS)
-    img = np.array(img)[...,:3]
-    image = torch.from_numpy(img.transpose((2, 0, 1))).float()
+    image = Image.open(test_image_path).resize((512,512), Image.Resampling.LANCZOS)
+    image = np.array(image)[...,:3]
+    image = torch.from_numpy(image.transpose((2, 0, 1))).float()
     image = TTR.Normalize(mean, std)(image).unsqueeze(0)
     
     with torch.no_grad():
