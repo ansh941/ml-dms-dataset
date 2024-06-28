@@ -77,6 +77,13 @@ Step 2. Run the script below.
 python inference.py --jit_path DMS46_v1.pt --image_folder path/to/images --output_folder path/to/results
 ```
 
+## Convert pretrained model from jit to torch
+Step 1. Run the script below to convert `DMS46_v1.pt` to torch model. Result weight is stored in `DMS46_v1.pth` and generate the result images about your test image for each model. So, You can compare result images.
+
+```
+python jit_to_torch.py --jit_path DMS46_v1.pt --torch_path DMS46_v1.pth --test_image_path your_own_test_image_path
+```
+
 ## Code License
 
 See [LICENSE](LICENSE.txt).
