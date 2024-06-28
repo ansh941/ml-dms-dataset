@@ -84,6 +84,13 @@ Step 1. Run the script below to convert `DMS46_v1.pt` to torch model. Result wei
 python jit_to_torch.py --jit_path DMS46_v1.pt --torch_path DMS46_v1.pth --test_image_path your_own_test_image_path
 ```
 
+## Model code License
+See [models/LICENSE](models/LICENSE).
+
+
+
 ## Code License
 
 See [LICENSE](LICENSE.txt).
+
+
